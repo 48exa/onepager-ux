@@ -1,0 +1,77 @@
+body{
+    background: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 0%,
+        rgb(255, 255, 255) 50%,
+        rgb(198,33,70) 50%,
+        rgb(198,33,70) 100%);
+        display: grid;
+        margin: 0%;
+        grid-template-columns: repeat(100, 1vw);
+        grid-template-rows: repeat(100, 1vh);
+}
+
+
+#extra {
+    grid-column: 8 / 40;
+    grid-row: 78 / 82;
+    font-family:Tahoma, sans-serif;;
+    font-size: 1.75vh;
+    color: rgb(150, 150, 150);
+}
+
+
+#android {  
+    grid-column: 20 / 30;
+    grid-row: 61 / 67;
+}
+
+
+#apple {
+    grid-column: 8 / 18;
+    grid-row: 61 / 67;
+}
+
+
+#text {
+    grid-column: 8 / 42;
+    grid-row: 48 / 58;
+    font-family:Tahoma, sans-serif;;
+    font-size: 2.5vh;
+}
+
+
+#header {
+    grid-column: 8 / 35;
+    grid-row: 37 / 47;
+    font-family:Tahoma, sans-serif;;
+    font-size: 4vh;
+    font-weight: 600;
+}
+
+
+#iphonel {
+    grid-column: 66   / 80;
+    grid-row: 8 / 90;
+    justify-items: center;
+    align-items: center;
+}
+
+#logol {
+    grid-column: 8 / 11;
+    grid-row: 24 / 34   ;
+    
+}
+
+
+#phone {
+    height:86vh;
+}
+
+#logo {
+    height: 8vh;
+}
+
+#store {
+    height: 7vh;
+}
