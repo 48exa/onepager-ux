@@ -4,6 +4,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    display: grid;
+    place-items: center;
+}
+
 .left-panel {
     display: flex;
     justify-content: center;
@@ -70,4 +75,100 @@ h1 {
     font-family: Tahoma, sans-serif;
     font-size: 2vw;
     margin-bottom: 2vh;
+}
+
+.background-blur {
+    background-color: #00000050;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+/* <-- Cookies Pop-up Screen --> */
+
+.cookies-popup {
+    padding: 8px;
+    z-index: 1000;
+    position: absolute;
+    width: 450px;
+    height: 225px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.cookies-bar {
+    background-color: #000;
+    color: #000;
+    border: none;
+    height: 2px;
+}
+
+.cookies-popup h3 {
+    font-size: 1.15vw;
+    font-weight: bolder;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.cookies-popup p {
+    font-weight: lighter;
+    padding: 10px;
+    font-size: 0.8vw;
+}
+
+a.blue {
+    color: #0000EE;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cookie-btn {
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.accept-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #1863DC;
+    color: #fff;
+    border: 2px solid #1863DC;
+    border-radius: 5px;
+}
+
+.accept-btn:hover {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2b72e6;
+    color: #fff;
+    border: 2px solid #2b72e6;
+    border-radius: 5px;
+}
+
+.reject-btn {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fff;
+    color: #1863DC;
+    border: 2px solid #1863DC;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.reject-btn:hover {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #2b72e6;
+    color: #fff;
+    border: 2px solid #2b72e6;
+    border-radius: 5px;
+}
+
+.cookie-buttons-wrapper {
+    margin-left: 40px;
 }
