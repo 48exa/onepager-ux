@@ -27,7 +27,7 @@ function cookieCheck() {
         COOKIE_P.innerHTML = "Accept the cookies."
         COOKIE_POPUP.style.height = "175px"
     } else if (localStorage.getItem('value') == "working") {
-        //BG_BLUR.style.display = "none"
+        BG_BLUR.style.display = "none"
         COOKIE_POPUP.style.display = "none"
     }
 }
@@ -37,7 +37,7 @@ if (localStorage.getItem('value') == "not working") {
     COOKIE_P.innerHTML = "Accept the cookies."
     COOKIE_POPUP.style.height = "175px"
 } else if (localStorage.getItem('value') == "working") {
-    //BG_BLUR.style.display = "none"
+    BG_BLUR.style.display = "none"
     COOKIE_POPUP.style.display = "none"
 }
 
