@@ -1,77 +1,72 @@
-body{
-    background: linear-gradient(
-        to right,
-        rgb(255, 255, 255) 0%,
-        rgb(255, 255, 255) 50%,
-        rgb(198,33,70) 50%,
-        rgb(198,33,70) 100%);
-        display: grid;
-        margin: 0%;
-        grid-template-columns: repeat(100, 1vw);
-        grid-template-rows: repeat(100, 1vh);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-#extra {
-    grid-column: 8 / 40;
-    grid-row: 78 / 82;
-    font-family:Tahoma, sans-serif;;
-    font-size: 1.75vh;
-    color: rgb(150, 150, 150);
-}
-
-
-#android {  
-    grid-column: 20 / 30;
-    grid-row: 61 / 67;
-}
-
-
-#apple {
-    grid-column: 8 / 18;
-    grid-row: 61 / 67;
-}
-
-
-#text {
-    grid-column: 8 / 42;
-    grid-row: 48 / 58;
-    font-family:Tahoma, sans-serif;;
-    font-size: 2.5vh;
-}
-
-
-#header {
-    grid-column: 8 / 35;
-    grid-row: 37 / 47;
-    font-family:Tahoma, sans-serif;;
-    font-size: 4vh;
-    font-weight: 600;
-}
-
-
-#iphonel {
-    grid-column: 66   / 80;
-    grid-row: 8 / 90;
-    justify-items: center;
+.left-panel {
+    display: flex;
+    justify-content: center;
     align-items: center;
+    width: 50vw;
+    height: 100vh;
+    float: left;
 }
 
-#logol {
-    grid-column: 8 / 11;
-    grid-row: 24 / 34   ;
-    
+.wrapper {
+    width: 65%;
+    max-height: 100%;
 }
 
-
-#phone {
-    height:86vh;
+.wrapper-downloads {
+    width: 50%
 }
 
-#logo {
-    height: 8vh;
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c62146;
+    width: 50vw;
+    height: 100vh;
+    float: right;
 }
 
-#store {
-    height: 7vh;
+img.logo {
+    margin-bottom: 3vh;
+}
+
+img.iphone {
+    height: 100vh;
+}
+
+.ios {
+    margin-right: 0.3vw;
+}
+
+.android {
+    margin-left: 0.3vw;
+}
+
+.download-btn {
+    cursor: pointer;
+    width: 30%;
+}
+
+p {
+    font-family:Tahoma, sans-serif;
+    font-size: 1vw;
+    margin-bottom: 3vh;
+}
+
+p.bottom-text {
+    color: #00000054;
+    margin-top: 5vh;
+    font-size: 0.75vw;
+}
+
+h1 {
+    font-family: Tahoma, sans-serif;
+    font-size: 2vw;
+    margin-bottom: 2vh;
 }
