@@ -44,6 +44,7 @@ img.logo {
 
 img.iphone {
     height: 100vh;
+    rotate: 2deg;
 }
 
 .ios {
@@ -171,4 +172,74 @@ a.blue {
 
 .cookie-buttons-wrapper {
     margin-left: 40px;
+}
+
+/* <-- Pop Up ad --> */
+
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 900;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 500px;
+    height: 650px;
+}
+
+.popup video {
+    margin: auto;
+    height: 480px;
+    border: 10px solid #fff;
+}
+
+.popup h1 {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+.popup .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 901;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 95px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .circle:active {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 901;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 95px;
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.thin {
+    margin-left: 380px;
+    display: none;
+}
+
+.medium {
+    margin-left: 485px;
+    display: none;
+}
+
+.wide {
+    margin-left: 562px;
+    display: none;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/x-icon" href="img/goofy.ico">
+<link rel="icon" type="image/x-icon" href="img/logo.svg">
 <html lang="en">
 
 <head>
@@ -8,6 +8,8 @@
 </head>
 
 <body>
+
+    <img src="/img/hair.png" alt="" class="hair">
 
     <div class="background-blur">
 
@@ -25,6 +27,16 @@
         </div>
     </div>
 
+    <div class="popup">
+        <h1>Watch this ad</h1>
+
+        <button onclick="closeAd()" class="circle thin">x</button>
+        <button onclick="closeAd()" class="circle medium">x</button>
+        <button onclick="closeAd()" class="circle wide">x</button>
+
+        <video autoplay="autoplay" controls src="/ads/gardenscapes.mp4"></video>
+    </div>
+
     <div class="wrapper-onepager">
         <div class="left-panel">
             <div class="wrapper">
@@ -37,8 +49,8 @@
                     news to profiles on favorite tech products.
                 </p>
                 <div class="downloads-wrapper">
-                    <img onclick="" class="ios download-btn" src="img/download-ios.svg" alt="Download on the app store">
-                    <img onclick="" class="android download-btn" src="/img/download-android.svg"
+                    <img class="ios download-btn" src="img/download-ios.svg" alt="Download on the app store">
+                    <img class="android download-btn" src="/img/download-android.svg"
                         alt="Download on the play store">
                 </div>
                 <p class="bottom-text">
@@ -54,5 +66,5 @@
         </div>
     </div>
 </body>
-<script src="/script/cookiescreen.js" defer></script>
+<script src="/script/index.js" defer></script>
 </html>
