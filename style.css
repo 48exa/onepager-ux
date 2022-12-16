@@ -9,6 +9,11 @@ body {
     place-items: center;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 .left-panel {
     display: flex;
     justify-content: center;
@@ -37,13 +42,22 @@ body {
     float: right;
 }
 
+img.hair {
+    background-color: #ffffff00;
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    height: 95%;
+    opacity: 0.2;
+}
+
 img.logo {
     margin-bottom: 3vh;
     width: 10%;
 }
 
 img.iphone {
-    height: 100vh;
+    height: 95vh;
     rotate: 2deg;
 }
 
