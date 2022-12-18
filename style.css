@@ -9,11 +9,16 @@ body {
     place-items: center;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 .left-panel {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     float: left;
 }
@@ -32,9 +37,18 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #c62146;
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
     float: right;
+}
+
+img.hair {
+    background-color: #ffffff00;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 95%;
+    opacity: 0.2;
 }
 
 img.logo {
@@ -43,7 +57,9 @@ img.logo {
 }
 
 img.iphone {
-    height: 100vh;
+    height: 95vh;
+    rotate: 2deg;
+    z-index: 1;
 }
 
 .ios {
@@ -55,8 +71,13 @@ img.iphone {
 }
 
 .download-btn {
+    z-index: 1;
     cursor: pointer;
     width: 30%;
+}
+
+.click {
+    z-index: 2;
 }
 
 p {
@@ -78,6 +99,7 @@ h1 {
 }
 
 .background-blur {
+    z-index: 900;
     background-color: #00000050;
     position: absolute;
     backdrop-filter: blur(5px);
@@ -171,4 +193,101 @@ a.blue {
 
 .cookie-buttons-wrapper {
     margin-left: 40px;
+}
+
+/* <-- Pop Up ad --> */
+
+.popup {
+    display: none;
+    position: absolute;
+    z-index: 900;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 500px;
+    height: 650px;
+}
+
+.closeAd {
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+    background-color: #000;
+    border: none;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 430px;
+}
+
+.closeAd:active {
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 430px;
+}
+
+.popup video {
+    z-index: 901;
+    margin: auto;
+    height: 680px;
+    border: 10px solid #fff;
+}
+
+.popup h1 {
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #fff;
+}
+
+.popup .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 901;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 95px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup .circle:active {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 901;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 95px;
+    border: 2px solid #fff;
+    background-color: #000;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.thin {
+    margin-left: 380px;
+    display: none;
+}
+
+.medium {
+    margin-left: 485px;
+    display: none;
+}
+
+.wide {
+    margin-left: 562px;
+    display: none;
 }
