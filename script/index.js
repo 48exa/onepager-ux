@@ -4,24 +4,20 @@ const bgBlur = document.querySelector(".background-blur"),
     cookieP = document.querySelector(".cookies-popup p"),
     popupScreen = document.querySelector(".popup"),
     vid = document.querySelector(".popup video"),
-    xButton = document.querySelector(".popup .circle"),
-    adText = document.querySelector(".popup h1"),
-    buttonThin = document.querySelector(".popup .thin"),
-    buttonMedium = document.querySelector(".popup .medium"),
-    buttonWide = document.querySelector(".popup .wide")
+    adText = document.querySelector(".popup h1");
 
-
-buttonThin.style.display = "none"
-buttonMedium.style.display = "none"
-buttonWide.style.display = "none"
 popupScreen.style.display = "none"
 
 let cookies = "not set",
     randInt = 0,
-    src = vid.getAttribute('src')
-
+    placeholder = 12034,
+    src = vid.getAttribute('src');
 
 /* <-- COOKIES --> */
+
+document.querySelector( ".download-btn" ).onclick = function() {
+    popUpAd()
+}
 
 function clear() {
     localStorage.clear()
@@ -62,32 +58,38 @@ if (localStorage.getItem('value') == "not working") {
 /* <-- POP UP AD --> */
 
 function randomInt() {
-    randInt = Math.floor(Math.random() * 30);
+    randInt = Math.floor(Math.random() * 4) + 1
 }
 
-function placeButton() {
-    if (src == "/ads/gardenscapes.mp4") {
-        buttonThin.style.display = "block"
-    }
+function hardClose() {
+    bgBlur.style.display = "none"
+    popupScreen.style.display = "none"
+    vid.pause()
 }
+
 
 function closeAd() {
-    --randInt
-
-    if (randInt == 0) {
-        vid.style.display = "none"
-        bgBlur.style.display = "none"
-        xButton.style.display = "none"
-        adText.style.display = "none"
+    if (placeholder > 50) {
+        placeholder = Math.floor(Math.random() * 20)
     }
+    if (placeholder == 0) {
+        hardClose()
+        placeholder = 12034
+    }
+    --placeholder
 }
 
-function openAd() {
+function popUpAd() {
+    randomInt()
+    vid.src = `/ads/${randInt}.mp4`
+    vid.autoplay = true;
     bgBlur.style.display = "grid"
     popupScreen.style.display = "grid"
-    xButton.style.display = "grid"
-    adText.style.display = "block"
-    randomInt()
-    placeButton()
 }
 
+document.querySelector('.popup video').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    hardClose()
+}
+
+/* <-- ENF --> */
