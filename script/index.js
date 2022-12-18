@@ -15,7 +15,7 @@ let cookies = "not set",
 
 /* <-- COOKIES --> */
 
-document.querySelector( ".download-btn" ).onclick = function() {
+document.querySelector(".download-btn").onclick = function () {
     popUpAd()
 }
 
@@ -67,7 +67,6 @@ function hardClose() {
     vid.pause()
 }
 
-
 function closeAd() {
     if (placeholder > 50) {
         placeholder = Math.floor(Math.random() * 20)
@@ -87,9 +86,9 @@ function popUpAd() {
     popupScreen.style.display = "grid"
 }
 
-document.querySelector('.popup video').addEventListener('ended',myHandler,false);
+document.querySelector('.popup video').addEventListener('ended', myHandler, false);
 function myHandler(e) {
     hardClose()
 }
 
-/* <-- ENF --> */
+/* <-- END --> */
