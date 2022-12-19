@@ -1,3 +1,10 @@
+/* <-- LOAD TIME --> */
+
+function color() {
+
+}
+
+/* <-- LOAD TIME --> */
 const bgBlur = document.querySelector(".background-blur"),
     cookiePopup = document.querySelector(".cookies-popup"),
     cookieH3 = document.querySelector(".cookies-popup h3"),
@@ -58,7 +65,7 @@ if (localStorage.getItem('value') == "not working") {
 /* <-- POP UP AD --> */
 
 function randomInt() {
-    randInt = Math.floor(Math.random() * 4) + 1
+    randInt = Math.floor(Math.random() * 7) + 1
 }
 
 function hardClose() {
