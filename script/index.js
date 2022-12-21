@@ -56,7 +56,7 @@ function cookieReject() {
     audio4.play()
     audio4.loop=true;
     audio5.play()
-    audio4.loop=true;
+    audio5.loop=true;
 }
 
 function cookieCheck() {
