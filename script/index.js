@@ -45,6 +45,8 @@ function cookieAccept() {
     audio.loop=true;
     audio2.loop=true;
     audio3.loop=true;
+    audio4.pause();
+    audio5.pause();
 }
 
 function cookieReject() {
