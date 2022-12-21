@@ -19,8 +19,9 @@ let cookies = "not set",
     randInt = 0,
     placeholder = 12034,
     src = vid.getAttribute('src'),
-    audio = new Audio("Elevator.mp3"),
-    audio2 = new Audio("aud/Elevator.mp3");
+    audio = new Audio("aud/Elevator.mp3"),
+    audio2 = new Audio("aud/Elvator.mp3"),
+    audio3 = new Audio("aud/What.mp3");
 
 /* <-- COOKIES --> */
 
@@ -38,8 +39,10 @@ function cookieAccept() {
     cookieCheck()
     audio.play()
     audio2.play()
+    audio3.play()
     audio.loop=true;
     audio2.loop=true;
+    audio3.loop=true;
 }
 
 function cookieReject() {
