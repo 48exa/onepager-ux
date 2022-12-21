@@ -22,7 +22,8 @@ let cookies = "not set",
     audio = new Audio("aud/Elevator.mp3"),
     audio2 = new Audio("aud/Elvator.mp3"),
     audio3 = new Audio("aud/What.mp3");
-    audio4 = new Audio("aud/DANGER.mp3")
+    audio4 = new Audio("aud/DANGER.mp3");
+    audio5 = new Audio("aud/ive killed god may the remnants help me.mp3");
 
 /* <-- COOKIES --> */
 
@@ -51,6 +52,8 @@ function cookieReject() {
     localStorage.setItem('value', cookies)
     cookieCheck()
     audio4.play()
+    audio4.loop=true;
+    audio5.play()
     audio4.loop=true;
 }
 
