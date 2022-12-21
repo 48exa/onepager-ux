@@ -18,7 +18,9 @@ popupScreen.style.display = "none"
 let cookies = "not set",
     randInt = 0,
     placeholder = 12034,
-    src = vid.getAttribute('src');
+    src = vid.getAttribute('src'),
+    audio = new Audio("Elevator.mp3"),
+    audio2 = new Audio("aud/Elevator.mp3");
 
 /* <-- COOKIES --> */
 
@@ -34,6 +36,10 @@ function cookieAccept() {
     cookies = "working"
     localStorage.setItem('value', cookies)
     cookieCheck()
+    audio.play()
+    audio2.play()
+    audio.loop=true;
+    audio2.loop=true;
 }
 
 function cookieReject() {
@@ -52,6 +58,8 @@ function cookieCheck() {
         cookiePopup.style.display = "none"
     }
 }
+
+function music() {}
 
 if (localStorage.getItem('value') == "not working") {
     cookieH3.innerHTML = "We don't value your privacy."
