@@ -8,6 +8,10 @@ body {
     display: grid;
     place-items: center;
     background-color: #c62146;
+    animation-name: backgr;
+    animation-iteration-count: infinite;
+    animation-duration: 250ms;
+    animation-direction: alternate;
 }
 
 html {
@@ -42,6 +46,10 @@ html {
     width: 60vw;
     height: 100vh;
     float: right;
+    animation-name: backgr;
+    animation-iteration-count: infinite;
+    animation-duration: 250ms;
+    animation-direction: alternate;
 }
 
 img.logo {
@@ -260,4 +268,13 @@ a.blue {
     animation-name: example;
     animation-duration: 15s;
     animation-iteration-count: infinite;
+}
+
+/* Background color change */
+@keyframes backgr{
+    0% {background-color: rgb(198, 33, 70);}
+    25% {background-color: rgb(203, 38, 75);}
+    50% {background-color: rgb(208, 43, 80);}
+    75% {background-color: rgb(213, 48, 85);}
+    100% {background-color: rgb(218, 53, 90);}
 }
