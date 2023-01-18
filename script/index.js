@@ -21,8 +21,8 @@ let cookies = "not set",
     src = vid.getAttribute('src'),
     audio1 = new Audio("aud/Elevator.mp3"),
     audio2 = new Audio("aud/Elvator.mp3"),
-    audio3 = new Audio("aud/What.mp3");
-    audio4 = new Audio("aud/DANGER.mp3");
+    audio3 = new Audio("aud/What.mp3"),
+    audio4 = new Audio("aud/DANGER.mp3"),
     audio5 = new Audio("aud/ive killed god may the remnants help me.mp3");
 
 /* <-- COOKIES --> */
@@ -42,7 +42,7 @@ function cookieAccept() {
     audio1.play()
     audio2.play()
     audio3.play()
-    audio.loop=true;
+    audio1.loop=true;
     audio2.loop=true;
     audio3.loop=true;
     audio4.pause();
