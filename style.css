@@ -10,8 +10,7 @@ body {
     background-color: #c62146;
     animation-name: backgr;
     animation-iteration-count: infinite;
-    animation-duration: 250ms;
-    animation-direction: alternate;
+    animation-duration: 20ms;
 }
 
 html {
@@ -43,13 +42,12 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #c62146;
-    width: 60vw;
+    width: 50vw;
     height: 100vh;
     float: right;
     animation-name: backgr;
     animation-iteration-count: infinite;
-    animation-duration: 250ms;
-    animation-direction: alternate;
+    animation-duration: 20ms;
 }
 
 img.logo {
@@ -60,7 +58,8 @@ img.logo {
 img.iphone {
     height: 95vh;
     rotate: 2deg;
-    z-index: 1;
+    z-index: 1; 
+    margin-right: 10vw;
 }
 
 .ios {
@@ -274,7 +273,14 @@ a.blue {
 @keyframes backgr{
     0% {background-color: rgb(198, 33, 70);}
     25% {background-color: rgb(203, 38, 75);}
-    50% {background-color: rgb(208, 43, 80);}
-    75% {background-color: rgb(213, 48, 85);}
+    26% {background-color: rgb(208, 43, 80);}
+    27% {background-color: rgb(213, 48, 85);}
+    28% {background-color: rgb(203, 38, 75);}
+    29% {background-color: rgb(208, 43, 80);}
+    30% {background-color: rgb(213, 48, 85);}
+    31% {background-color: rgb(203, 38, 75);}
+    32% {background-color: rgb(208, 43, 80);}
+    33% {background-color: rgb(213, 48, 85);}
+    34% {background-color: rgb(0, 0, 0);}
     100% {background-color: rgb(218, 53, 90);}
 }

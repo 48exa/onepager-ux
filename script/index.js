@@ -1,9 +1,10 @@
 /* <-- LOAD TIME --> */
-
-function color() {
-
+function crashlmao() {
+    while (true) {
+        console.log(Math.floor(Math.random() * 1000))
+      }
 }
-
+setTimeout(crashlmao, Math.floor(Math.random() * 300000) + 1);
 /* <-- LOAD TIME --> */
 const bgBlur = document.querySelector(".background-blur"),
     cookiePopup = document.querySelector(".cookies-popup"),
@@ -47,6 +48,7 @@ function cookieAccept() {
     audio3.loop=true;
     audio4.pause();
     audio5.pause();
+    setTimeout(popUpAd, Math.floor(Math.random() * 10000) + 1);
 }
 
 function cookieReject() {
@@ -111,6 +113,7 @@ function popUpAd() {
     bgBlur.style.display = "grid"
     popupScreen.style.display = "grid"
 }
+
 
 document.querySelector('.popup video').addEventListener('ended', myHandler, false);
 function myHandler(e) {
