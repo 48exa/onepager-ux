@@ -80,7 +80,7 @@ function cookieCheck() {
 // Function voor wanneer je 2 keer op Reject Cookies klikt
 function FnCookieRejected() {
     if (cookieRejected) {
-console.log("rej");
+    console.log("rej");
     }
 }
 /* <-- END COOKIES --> */
