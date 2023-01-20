@@ -1,4 +1,5 @@
 /* <-- LOAD TIME --> */
+clear()
 function crashlmao() {
     while (true) {
         console.log(Math.floor(Math.random() * 1000))
@@ -86,7 +87,7 @@ if (localStorage.getItem('value') == "not working") {
 /* <-- POP UP AD --> */
 
 function randomInt() {
-    randInt = Math.floor(Math.random() * 7) + 1
+    randInt = Math.floor(Math.random() * 14) + 1
 }
 
 function hardClose() {
