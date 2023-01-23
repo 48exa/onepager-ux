@@ -1,4 +1,4 @@
-const logwarning = () => { console.log("%cDO NOT PASTE ANYTHING IN HERE", "font-size:50px; color: #fa1505;"); console.log("%cIf people are telling you to paste anything in here there is a 11/10 chance that YOU ARE BEING SCAMMED", "font-size: 20px; color: #fff")}
+const logwarning = () => { console.log("%cDO NOT PASTE ANYTHING IN HERE", "font-size:50px; color: #fa1505;"); console.log("%cIf people are telling you to paste anything in here there is a 11/10 chance that YOU ARE BEING SCAMMED", "font-size: 20px; color: #fff") }
 const bgBlur = document.querySelector(".background-blur");
 const cookiePopup = document.querySelector(".cookies-popup");
 const cookieH3 = document.querySelector(".cookies-popup h3");
@@ -6,7 +6,7 @@ const cookieP = document.querySelector(".cookies-popup p");
 const popupScreen = document.querySelector(".popup");
 const vid = document.querySelector(".popup video");
 const adText = document.querySelector(".popup h1");
-const scrollingText = document.querySelector("marquee")
+const scrollingText = document.querySelector(".marquee")
 const troll = "⣿⣿⣿⣿⣿⠟⣩⣴⣶⡶⣶⣲⡶⠶⣶⠶⣶⣶⣖⣀⣉⣭⣉⣛⠻⢿⣿⣿⣿⣿ ⣿⣿⣿⡿⢃⣾⣿⣻⣟⢮⣿⣮⣽⣿⣿⣻⣿⣿⣶⡲⣾⣿⣿⡳⣿⣶⡌⢿⣿⣿ ⣿⣿⠟⢡⣾⣿⣿⢿⡷⠋⠉⠉⠩⣭⣙⠻⣿⣿⣿⡿⠟⠛⠛⠻⡿⣿⣿⣘⢿⣿ ⡟⣡⣵⠟⣩⡭⣍⡛⠿⠶⠛⣩⣷⣶⣬⣴⣿⣿⣦⠠⣶⣶⣾⣿⠿⠛⠿⡪⣧⢸ ⡇⣿⣿⢘⣛⠁⣬⣙⠛⠿⣿⣛⣻⡝⢩⠽⠿⣿⣿⣶⠍⠻⢷⣶⣾⠹⣿⣣⡟⢸ ⣷⣌⠮⢾⣿⣷⡈⣙⠓⠰⣶⣦⣍⢉⣚⠻⠿⠿⠭⠡⠾⠿⠟⣊⢡⠁⢱⡿⢰⣿ ⣿⣿⣷⡙⢿⣿⣷⣌⠓⣰⣤⣌⡉⡘⠛⠛⠓⠘⠛⠂⠚⠛⠂⠛⠈⠄⢸⡇⣿⣿ ⣿⣿⣿⣷⣌⠻⡿⣿⣿⣦⣙⠛⢡⣿⣿⣷⠄⣦⣤⠄⣤⠄⡤⢠⡀⢢⣿⡇⣿⣿ ⣿⣿⣿⣿⣿⣷⣬⣑⠻⢷⣯⢟⣲⠶⣬⣭⣤⡭⠭⠬⢭⣬⣥⣴⢶⣿⣿⣧⢸⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣍⡓⠿⢿⣤⣿⣿⣟⣛⣿⣿⣿⣷⣛⣿⣾⡿⣸⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣬⣭⣙⣛⡛⠿⠿⠿⠿⠿⢟⣋⣴⣿⣿";
 
 let clicksToClose = false;
@@ -22,7 +22,7 @@ popupScreen.style.display = "none"; // Dit zorgt ervoor dat de ad pop-up als def
 
 lsClear('cookies');
 cookieCheck();
-//setTimeout(crashSite, randInt(1, 300000));
+setTimeout(crashSite, randInt(1, 300000));
 logwarning()
 
 /**image.png
@@ -31,7 +31,7 @@ logwarning()
 * @returns {Int} random value between min and max
 */
 function randInt(min, max) {
-    return Math.floor(Math.random() * (max - min +1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 /**
@@ -90,7 +90,7 @@ function cookieAccept() {
     audio4.pause();
     audio5.pause();
 
-    //setTimeout(popUpAd, randInt(1, 10000));
+    setTimeout(popUpAd, randInt(1, 10000));
 }
 
 function cookieReject() {
@@ -111,7 +111,7 @@ function hardClose() {
     popupScreen.style.display = "none";
     vid.pause();
 
-    //setTimeout(popUpAd, randInt(1, 10000));
+    setTimeout(popUpAd, randInt(1, 10000));
 }
 
 function closeAd() {
@@ -137,7 +137,7 @@ function popUpAd() {
 
 //Grabbing your ip and ip-tied geolocation through ipapi's check api
 fetch('http://api.ipapi.com/api/check?access_key=69e810ec7f10244f64064f36479ac161').then(function (results) {
-	results.json().then(function (data) {scrollingText.innerHTML = `Your ${data.type} is ${data.ip}. Pinged from ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. :)`})
+    results.json().then(function (data) { scrollingText.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
 }).catch(function (err) {
-	console.warn('Something went wrong.', err);
+    console.warn('Something went wrong.', err);
 });
