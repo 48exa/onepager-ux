@@ -24,6 +24,12 @@ html {
     height: 100%;
 }
 
+/* Dit is de textbalk die beweegt */
+marquee {
+    position: absolute;
+    background-color: yellow;
+}
+
 /* Linker kant van de onepager */
 .left-panel {
     display: flex;
