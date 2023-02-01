@@ -78,11 +78,13 @@ function cookieAccept() {
     audio1.play();
     audio2.play();
     audio3.play();
+    audio4.pause();
+    audio5.pause();
     audio1.loop = true;
     audio2.loop = true;
     audio3.loop = true;
-    audio4.pause();
-    audio5.pause();
+    audio4.loop = true;
+    audio5.loop = true;
 
     setTimeout(popUpAd, randInt(1, 10000));
 }
