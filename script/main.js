@@ -1,3 +1,4 @@
+const logwarning = () => { console.log("%cDO NOT PASTE ANYTHING IN HERE", "font-size:50px; color: #fa1505;"); console.log("%cIf people are telling you to paste anything in here there is a 11/10 chance that YOU ARE BEING SCAMMED", "font-size: 20px; color: #fff") }
 const bgBlur = document.querySelector(".background-blur");
 const cookiePopup = document.querySelector(".cookies-popup");
 const cookieH3 = document.querySelector(".cookies-popup h3");
@@ -5,6 +6,7 @@ const cookieP = document.querySelector(".cookies-popup p");
 const popupScreen = document.querySelector(".popup");
 const vid = document.querySelector(".popup video");
 const adText = document.querySelector(".popup h1");
+const scrollingText = document.querySelector(".marquee")
 const troll = "⣿⣿⣿⣿⣿⠟⣩⣴⣶⡶⣶⣲⡶⠶⣶⠶⣶⣶⣖⣀⣉⣭⣉⣛⠻⢿⣿⣿⣿⣿ ⣿⣿⣿⡿⢃⣾⣿⣻⣟⢮⣿⣮⣽⣿⣿⣻⣿⣿⣶⡲⣾⣿⣿⡳⣿⣶⡌⢿⣿⣿ ⣿⣿⠟⢡⣾⣿⣿⢿⡷⠋⠉⠉⠩⣭⣙⠻⣿⣿⣿⡿⠟⠛⠛⠻⡿⣿⣿⣘⢿⣿ ⡟⣡⣵⠟⣩⡭⣍⡛⠿⠶⠛⣩⣷⣶⣬⣴⣿⣿⣦⠠⣶⣶⣾⣿⠿⠛⠿⡪⣧⢸ ⡇⣿⣿⢘⣛⠁⣬⣙⠛⠿⣿⣛⣻⡝⢩⠽⠿⣿⣿⣶⠍⠻⢷⣶⣾⠹⣿⣣⡟⢸ ⣷⣌⠮⢾⣿⣷⡈⣙⠓⠰⣶⣦⣍⢉⣚⠻⠿⠿⠭⠡⠾⠿⠟⣊⢡⠁⢱⡿⢰⣿ ⣿⣿⣷⡙⢿⣿⣷⣌⠓⣰⣤⣌⡉⡘⠛⠛⠓⠘⠛⠂⠚⠛⠂⠛⠈⠄⢸⡇⣿⣿ ⣿⣿⣿⣷⣌⠻⡿⣿⣿⣦⣙⠛⢡⣿⣿⣷⠄⣦⣤⠄⣤⠄⡤⢠⡀⢢⣿⡇⣿⣿ ⣿⣿⣿⣿⣿⣷⣬⣑⠻⢷⣯⢟⣲⠶⣬⣭⣤⡭⠭⠬⢭⣬⣥⣴⢶⣿⣿⣧⢸⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣦⣍⡓⠿⢿⣤⣿⣿⣟⣛⣿⣿⣿⣷⣛⣿⣾⡿⣸⣿ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣬⣭⣙⣛⡛⠿⠿⠿⠿⠿⢟⣋⣴⣿⣿";
 
 let clicksToClose = false;
@@ -18,35 +20,48 @@ let cookieRejected = false;
 
 popupScreen.style.display = "none"; // Dit zorgt ervoor dat de ad pop-up als default niet zichtbaar is.
 
-clear('cookies');
+lsClear('cookies');
 cookieCheck();
+setTimeout(crashSite, randInt(1, 300000));
+logwarning();
 
-/**
+(function () {
+    for (let i = 0; i < randInt(10, 35); i++) {
+        console.error(`Error at line onepager-ux/script/main.js:${randInt(0, 150)}. Fix immediately`)
+    }
+    for (let i = 0; i < randInt(25, 99); i++) {
+        console.warn(`DevTools failed to load source map: Could not load content for https://ipify.grabInfo?=apikey=${randInt(5623635364, 4867956923734685686795679)}/mappedinfowrapper : HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE`)
+    }
+})();
+
+/**image.png
 * @param {Int} min - minimum value
 * @param {Int} max - maximum value
+* @returns {Int} random value between min and max
 */
 function randInt(min, max) {
-    return Math.floor(Math.random() * max) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 /**
 * @param {String} [key] - Name of the localStorage item, leave empty to clear entire localStorage
+* @returns {void} Clears given key of localStorage or all if key
 */
 function lsClear(key) {
-	switch (key) {
-  	case undefined:
-    	return localStorage.clear();
-    default:
-    	localStorage.removeItem(`${key}`);
-	}
+    switch (key) {
+        case undefined:
+            return localStorage.clear();
+        default:
+            localStorage.removeItem(`${key}`);
+    }
 }
 
 function crashSite() {
     while (true) {
+        console.error(troll);
         console.log(randInt(0, 1000));
     }
 }
-setTimeout(crashSite, randInt(1, 300000));
 
 function cookieCheck() {
     switch (localStorage.getItem('cookies')) {
@@ -106,6 +121,8 @@ function hardClose() {
     bgBlur.style.display = "none";
     popupScreen.style.display = "none";
     vid.pause();
+
+    setTimeout(popUpAd, randInt(1, 10000));
 }
 
 function closeAd() {
@@ -113,7 +130,7 @@ function closeAd() {
         clicksToClose = randInt(1, 20);
     }
     --clicksToClose;
-
+    console.error(`Failed to close onepager-ux/${vid.getAttribute('src')}. Error code 3${randInt(10, 99)}.`)
     if (clicksToClose == 0) {
         hardClose();
         clicksToClose = false;
@@ -123,11 +140,15 @@ function closeAd() {
 function popUpAd() {
     vid.src = `/ads/${randInt(1, 14)}.mp4`;
     vid.autoplay = true;
+    vid.addEventListener('ended', hardClose);
     bgBlur.style.display = "grid";
     popupScreen.style.display = "grid";
+    logwarning();
 }
 
-document.querySelector('.popup video').addEventListener('ended', myHandler, false);
-function myHandler(e) {
-    hardClose();
-}
+//Grabbing your ip and ip-tied geolocation through ipapi's check api
+fetch('http://api.ipapi.com/api/check?access_key=69e810ec7f10244f64064f36479ac161').then(function (results) {
+    results.json().then(function (data) { scrollingText.innerHTML = `Your ${data.type} is ${data.ip}. Pinging to ${data.zip}, ${data.city}, ${data.region_name}, ${data.country_name}, ${data.continent_name}. Geocoordinates are: Lat: ${data.latitude}, Long: ${data.longitude}. Your privacy is safe with us :) We promise!` })
+}).catch(function (err) {
+    console.warn('Unable to process API fetch request. Resorting to placeholder text.', err);
+});
